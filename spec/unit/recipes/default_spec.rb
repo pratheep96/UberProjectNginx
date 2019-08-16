@@ -25,7 +25,7 @@ describe 'nginx_uber::default' do
       expect(chef_run).to start_service 'nginx'
     end
     it 'should a create a proxy.conf template' do
-      expect(chef_run).to create_template('/etc/nginx/sites-availables/proxy.conf').with_variables(proxy_port: 3000)
+      expect(chef_run).to create_template('/etc/nginx/sites-available/proxy.conf').with_variables(proxy_port: 3000)
     end
     it 'should a create symlink' do
       expect(chef_run).to create_link('/etc/nginx/sites-enabled/proxy.conf').with_link_type(:symbolic)
