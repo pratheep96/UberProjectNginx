@@ -17,7 +17,7 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-18.04
+  - name: ubuntu/xenial64
 
 suites:
   - name: default
